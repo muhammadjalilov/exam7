@@ -44,6 +44,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/v1/', include('task1.urls.v1')),
     path('api/v1/', include('task2.urls.v1')),
+    path('api/v1/', include('task3.urls.v1')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     # local apps
     'task1',
     'task2',
+    'task3',
     # external apps
     'rest_framework',
     'rest_framework_simplejwt',
