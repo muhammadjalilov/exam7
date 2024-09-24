@@ -15,10 +15,6 @@ class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-    def create(self, request, *args, **kwargs):
-        return super().create(request, *args, **kwargs)
-
-
     def destroy(self, request, *args, **kwargs):
         instance: User = self.get_object()
         instance.is_deleted = True
