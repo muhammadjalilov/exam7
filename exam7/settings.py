@@ -37,10 +37,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # local apps
     'task1',
+    'task2',
     # external apps
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_yasg',
+    'django_filters',
 
 ]
 
@@ -131,4 +133,5 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     "TOKEN_OBTAIN_SERIALIZER": "task1.my_token.MyTokenObtainPairSerializer",
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
